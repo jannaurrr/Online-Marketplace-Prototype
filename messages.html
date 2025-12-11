@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Messages</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root { --accent:#b22222; --bg:#000000; }
+    body { font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:#fff; margin:0; }
+    .navbar { height:70px; }
+    .navbar-brand { font-weight:700; color:var(--accent); }
+    .navbar-nav .nav-link { color:#fff; margin-right:15px; }
+    .navbar-nav .nav-link.active { color:var(--accent) !important; font-weight:700 !important; }
+
+    .messages-container { display:flex; height:calc(100vh - 70px); }
+    .sidebar { width:300px; background:#111; border-right:1px solid #333; overflow-y:auto; }
+    .chat-window { flex:1; display:flex; flex-direction:column; }
+
+    .conversation { padding:15px; border-bottom:1px solid #333; cursor:pointer; }
+    .conversation:hover { background:#222; }
+    .conversation h6 { margin:0; font-weight:600; color:#fff; }
+    .conversation p { margin:0; font-size:0.85rem; color:#aaa; }
+
+    .chat-header { background:#111; color:#fff; padding:15px; border-bottom:1px solid #333; }
+    .chat-header h5 { margin:0; font-weight:600; }
+    .chat-header small { color:#bbb; }
+
+    .chat-messages { flex:1; padding:20px; overflow-y:auto; }
+    .message { max-width:70%; margin-bottom:15px; padding:10px 15px; border-radius:15px; position:relative; }
+    .message.sent { background:var(--accent); color:#fff; margin-left:auto; }
+    .message.received { background:#333; color:#fff; margin-right:auto; }
+    .timestamp { font-size:0.75rem; color:#bbb; margin-top:5px; }
+
+    .chat-input { padding:15px; border-top:1px solid #333; background:#111; display:flex; align-items:center; }
+    .chat-input textarea { flex:1; border-radius:20px; border:none; padding:10px 15px; resize:none; font-size:1rem; }
+    .chat-input button { margin-left:10px; border-radius:50%; background:var(--accent); color:#fff; border:none; width:45px; height:45px; display:flex; align-items:center; justify-content:center; }
+    .navbar-nav .nav-link.active { color: var(--accent) !important; font-weight: 700 !important; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="#">Marketplace</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav d-flex flex-row gap-3 align-items-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+        <li class="nav-item"><a class="nav-link" href="listings.html">Listings</a></li>
+        <li class="nav-item"><a class="nav-link active" href="messages.html">Messages</a></li>
+        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="disputes.html">Disputes</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        <li class="nav-item"><a href="#"><i class="bi bi-person-circle fs-4 text-white"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="messages-container">
+  <div class="sidebar">
+    <div class="conversation">
+      <h6>Seller A</h6>
+      <p>Last message preview...</p>
+    </div>
+    <div class="conversation">
+      <h6>Buyer B</h6>
+      <p>Last message preview...</p>
+    </div>
+    <div class="conversation">
+      <h6>Seller C</h6>
+      <p>Last message preview...</p>
+    </div>
+  </div>
+
+  <div class="chat-window">
+    <div class="chat-header">
+      <h5>Seller A</h5>
+      <small>Online</small>
+    </div>
+
+    <div class="chat-messages">
+      <div class="message received">
+        Hi, is this item still available?
+        <div class="timestamp">10:15 AM</div>
+      </div>
+      <div class="message sent">
+        Yes, it’s still available! Would you like to proceed with the purchase?
+        <div class="timestamp">10:16 AM ✓✓</div>
+      </div>
+    </div>
+
+    <div class="chat-input">
+      <textarea class="form-control" rows="1" placeholder="Type a message..."></textarea>
+      <button><i class="bi bi-send-fill"></i></button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

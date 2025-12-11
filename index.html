@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marketplace</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root { --accent:#b22222; --bg:#000000; }
+    body { font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background:var(--bg); color:#fff; margin:0; }
+    .navbar { height:70px; }
+    .navbar-brand { font-weight:700; color:var(--accent); }
+    .navbar-nav .nav-link { color:#fff; margin-right:15px; }
+    header.banner { height:280px; overflow:hidden; position:relative; }
+    header.banner img { width:100%; height:100%; object-fit:cover; }
+    .banner-overlay { position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.4); }
+    .banner-content { position:absolute; top:0; left:0; right:0; bottom:0; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:#fff; padding:0 15px; }
+    .btn-accent { background:var(--accent); color:#fff; border-radius:8px; }
+    .btn-accent:hover { background:#8b1a1a; }
+    .card-product { border-radius:12px; box-shadow:0 6px 18px rgba(255,255,255,0.1); transition:transform .2s; background:#fff; color:#000; overflow:hidden; }
+    .card-product:hover { transform:translateY(-4px); }
+    .product-img { height:170px; object-fit:cover; border-top-left-radius:12px; border-top-right-radius:12px; }
+    .badge-verified { background:#e6fffa; color:#0f5132; border-radius:8px; padding:2px 6px; font-size:0.75rem; font-weight:600; }
+    .small-muted { color:#6c757d; font-size:0.9rem; }
+    footer { background:#b22222; height:70px; display:flex; align-items:center; justify-content:center; color:#fff; }
+    .navbar-nav .nav-link.active { color: var(--accent) !important; font-weight: 700 !important; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm" style="height:70px;">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="#">Marketplace</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav d-flex flex-row gap-3 align-items-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="browse.html">Browse</a></li>
+        <li class="nav-item"><a class="nav-link" href="listings.html">Listings</a></li>
+        <li class="nav-item"><a class="nav-link" href="messages.html">Messages</a></li>
+        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="disputes.html">Disputes</a></li>
+        <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html"><i class="bi bi-person-circle fs-4 text-white"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="banner">
+  <img src="https://i.pinimg.com/1200x/1d/c9/02/1dc90243b72d9e6bea69e31c951457ab.jpg" alt="Marketplace Banner">
+  <div class="banner-overlay"></div>
+  <div class="banner-content">
+    <div class="d-flex justify-content-center w-100 mb-3" style="max-width:500px;">
+      <input class="form-control form-control-lg" placeholder="Search products..."/>
+      <button class="btn btn-accent ms-2">Search</button>
+    </div>
+    <h1 class="fw-bold mb-1">Welcome to Marketplace</h1>
+    <p class="lead">Buy, Sell, and Connect with Confidence</p>
+  </div>
+</header>
+
+<main class="container mt-4">
+  <h4 class="mb-3 text-white">Discover Products</h4>
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Smartphone">
+        <div class="card-body">
+          <h6 class="fw-bold">Smartphone</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱15,999</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1520975918318-3c5c6f1c5c6e?auto=format&fit=crop&w=300&h=170" class="product-img" alt="T-Shirt">
+        <div class="card-body">
+          <h6 class="fw-bold">Graphic T-Shirt</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱499</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Sofa">
+        <div class="card-body">
+          <h6 class="fw-bold">Modern Sofa</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱12,999</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1585238342028-4e6f9f3d2c3f?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Skincare Set">
+        <div class="card-body">
+          <h6 class="fw-bold">Skincare Set</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱899</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1599058917212-9f3b2c6f9f3e?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Basketball">
+        <div class="card-body">
+          <h6 class="fw-bold">Basketball</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱699</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Motorcycle">
+        <div class="card-body">
+          <h6 class="fw-bold">Motorcycle</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱85,000</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4">
+      <div class="card card-product">
+        <img src="https://images.unsplash.com/photo-1616627455560-9f3b2c6f9f3e?auto=format&fit=crop&w=300&h=170" class="product-img" alt="Collectible Toy">
+        <div class="card-body">
+          <h6 class="fw-bold">Collectible Toy</h6>
+          <p class="small-muted mb-1">Seller <span class="badge-verified">✔ Verified</span></p>
+          <p class="text-danger fw-bold mb-2">₱1,299</p>
+          <button class="btn btn-sm btn-accent w-100">Chat Seller</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 mb-4 d-flex align-items-center justify-content-center">
+      <a href="browse.html" class="text-decoration-none w-100">
+        <div class="card card-product position-relative" style="max-width:300px;">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&h=170" class="product-img" alt="See More">
+          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center" 
+               style="background: rgba(0,0,0,0.6); border-radius:12px;">
+            <span class="fw-bold text-white fs-5">See More Products</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-dark" style="height:70px;">
+  <div class="container-fluid px-4 h-100 d-flex align-items-center justify-content-center">
+    <span class="small-muted text-center text-white">
+      &copy; 2025 Online Marketplace Prototype | Ibo, Janna Hersey R.
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
